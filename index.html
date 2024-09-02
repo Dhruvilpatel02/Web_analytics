@@ -16,6 +16,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TGT784BP');</script>
 <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download PDF Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 </head>
 
 <body>
@@ -47,6 +52,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3 class="menuItem">BLAZER</h3>
             <h3 class="menuItem">CRATER</h3>
             <h3 class="menuItem">HIPPIE</h3>
+             <h1>Generate and Download PDF</h1>
+    <button id="download-pdf">Download PDF</button>
+
+    <script>
+        document.getElementById('download-pdf').addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Add content to the PDF
+            doc.text('Hello, Dhruvil!', 10, 10);
+            doc.text('This is a sample PDF document.', 10, 20);
+
+            // Save the PDF and prompt the user to download
+            doc.save('sample.pdf');
+        });
+    </script>
         </div>
     </nav>
     <div class="slider">
