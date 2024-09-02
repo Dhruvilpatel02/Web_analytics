@@ -20,7 +20,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download PDF Example</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        /* Style the button */
+        #download-pdf {
+            background-color: red; /* Red background */
+            color: white; /* White text */
+            padding: 10px 20px; /* Some padding */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer/hand icon on hover */
+            font-size: 16px; /* Increase font size */
+        }
 
+        /* Add a hover effect */
+        #download-pdf:hover {
+            background-color: darkred; /* Darker red background on hover */
+        }
+    </style>
 </head>
 
 <body>
@@ -52,7 +68,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3 class="menuItem">BLAZER</h3>
             <h3 class="menuItem">CRATER</h3>
             <h3 class="menuItem">HIPPIE</h3>
-             <h1>Generate and Download PDF</h1>
+            <h1>Generate and Download PDF</h1>
     <button id="download-pdf">Download PDF</button>
 
     <script>
@@ -68,7 +84,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             doc.save('sample.pdf');
         });
     </script>
-        </div>
     </nav>
     <div class="slider">
         <div class="sliderWrapper">
