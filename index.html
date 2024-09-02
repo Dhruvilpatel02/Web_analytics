@@ -36,6 +36,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         #download-pdf:hover {
             background-color: darkred; /* Darker red background on hover */
         }
+        /* Style the form */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        /* Style the form elements */
+        input[type="text"], input[type="file"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Add a hover effect to the submit button */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 
@@ -177,6 +211,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <button class="productButton">BUY NOW!</button>
         </div>
+        <form action="#" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+    
+        <label for="options">Choose an Option:</label>
+        <select id="options" name="options" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+
         <div class="payment">
             <h1 class="payTitle">Personal Information</h1>
             <label>Name and Surname</label>
