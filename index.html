@@ -1,6 +1,16 @@
 <html lang="en">
 
 <head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9D7FEPYS1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L9D7FEPYS1');
+</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +24,69 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5GBQ4DDR');</script>
+})(window,document,'script','dataLayer','GTM-TGT784BP');</script>
 <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download PDF Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        /* Style the button */
+        #download-pdf {
+            background-color: red; /* Red background */
+            color: white; /* White text */
+            padding: 10px 20px; /* Some padding */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer/hand icon on hover */
+            font-size: 16px; /* Increase font size */
+        }
+
+        /* Add a hover effect */
+        #download-pdf:hover {
+            background-color: darkred; /* Darker red background on hover */
+        }
+        /* Style the form */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        /* Style the form elements */
+        input[type="text"], input[type="file"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Add a hover effect to the submit button */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GBQ4DDR"
+   <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGT784BP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     
@@ -47,7 +112,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3 class="menuItem">BLAZER</h3>
             <h3 class="menuItem">CRATER</h3>
             <h3 class="menuItem">HIPPIE</h3>
-        </div>
+            <h1>Generate and Download PDF</h1>
+    <button id="download-pdf">Download PDF</button>
+
+    <script>
+        document.getElementById('download-pdf').addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Add content to the PDF
+            doc.text('Hello, Dhruvil!', 10, 10);
+            doc.text('This is a sample PDF document.', 10, 20);
+
+            // Save the PDF and prompt the user to download
+            doc.save('sample.pdf');
+        });
+    </script>
     </nav>
     <div class="slider">
         <div class="sliderWrapper">
@@ -141,6 +221,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <button class="productButton">BUY NOW!</button>
         </div>
+       
+
         <div class="payment">
             <h1 class="payTitle">Personal Information</h1>
             <label>Name and Surname</label>
@@ -255,6 +337,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
     <script src="./app.js"></script>
+     <form action="#" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+    
+        <label for="options">Choose an Option:</label>
+        <select id="options" name="options" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d9Gy5OUH__Q?si=KcRdv2ahNXOZHBR1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </body>
 
 </html>
